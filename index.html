@@ -1,0 +1,831 @@
+<!DOCTYPE HTML PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta name="author" content="Ed Bueler">
+  <meta name="description" content="ice flow page">
+  <title>Ice Sheet Modeling at UAF</title>
+  <style type="text/css">
+--
+                @page { size: 8.5in 11in; margin: 0.79in }
+                P { margin-bottom: 0.08in }
+        --></style>
+</head>
+
+<body>
+<h2 style="text-align: center; color: rgb(0, 0, 153);"><big>Ice Sheet Modeling
+at UAF</big><br>
+</h2>
+
+<div style="text-align: center;">
+<h5><span
+style="color: rgb(51, 51, 153); font-weight: normal; font-style: italic;">Our
+research is funded by NASA's Modeling, Analysis, and Prediction and Cryospheric
+Sciences programs, under grants NAG5-11371, NNX09AJ38C, NNX13AM16G,
+NNX13AK27G</span><span style="font-family: monospace;"></span><small><span
+style="color: rgb(51, 51, 153); font-style: italic;"></span></small><small><span
+style="font-style: italic;"></span></small><br>
+</h5>
+<span style="color: rgb(51, 51, 153);"></span> 
+
+<table style="text-align: left; width: 100%;" border="0" cellpadding="2"
+cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top; width: 42%;"><small><font
+        color="#333399">We develop and maintain the <a
+        href="http://www.pism-docs.org/">Parallel Ice Sheet Model (PISM)</a>. 
+        It simulates the thickness, temperature, velocity and age of ice
+        sheets.  It uses newly-developed techniques to model fast ice dynamics,
+        earth deformation, and conservation of energy in the two-phase fluid. 
+        It has complete documentation and a large set of verification and
+        software tests.<br>
+        <br>
+        We contribute to the <a
+        href="http://websrv.cs.umt.edu/isis/index.php/SeaRISE_Assessment">SeaRISE
+        assessment process</a>.<br>
+        <br>
+        PISM has a <a
+        href="http://www.pism-docs.org/wiki/doku.php?id=projects">growing base
+        of users</a> who  have done simulations on 1 to 4000 processors on
+        these problems: Greenland ice sheet, Antarctica ice sheet, Svalbard
+        glaciers, Storglaciaren (Sweden), Antarctic ice shelves, and Greenland
+        outlet glaciers.  Paleo simulations include Laurentide, North American
+        Cordilleran</font></small><small><font color="#333399">, and New
+        Zealand</font></small><small><font color="#333399">paleo-ice-sheets.<br>
+        <br>
+        PISM is jointly developed at the University of Alaska, Fairbanks (UAF)
+        and the Potsdam Institute for Climate Impact Research (PIK). UAF
+        developers are based in the Glaciers Group at the Geophysical Institute
+        and in the Department of Mathematics and Statistics.  Development is
+        supported by the NASA Modeling, Analysis, and Prediction program
+        (2009&ndash;2017), the NASA Cryospheric Sciences program, and by a
+        grant of resources from the Arctic Region Supercomputing
+        Center.</font></small><font color="#333399"><small><br>
+        <br>
+        </small></font> <font><font color="#333399"><span
+        style="font-weight: bold;"></span></font></font></td>
+      <td style="vertical-align: top;">
+        <table style="text-align: left; width: 100%;" cellpadding="2"
+        cellspacing="2" border="0">
+          <tbody>
+            <tr>
+              <td style="vertical-align: top;"><br>
+              </td>
+            </tr>
+            <tr>
+              <td style="vertical-align: top;">
+                <table style="text-align: left; width: 100%;" border="0"
+                cellpadding="2" cellspacing="2">
+                  <tbody>
+                    <tr>
+                      <td style="vertical-align: top;"><a
+                        href="csurf_1km_600dpi.png"><img
+                        alt="observed versus PISM-modeled surface velocity from 1km run"
+                        src="csurf_1km_100dpi.png"
+                        style="border: 0px solid ; width: 403px; height: 306px;"></a><br>
+                        <a><font
+                        style="font-style: italic; color: rgb(51, 51, 153);"
+                        size="-2">Observed (left; Joughin et al, 2010) and
+                        PISM-modeled (right;) surface speed for the Greenland
+                        ice sheet. From a </font><font
+                        style="color: rgb(51, 51, 153);" size="-2"><span
+                        style="font-weight: bold;"></span><big><span
+                        style="font-weight: bold;">1 km
+                        </span></big></font><font
+                        style="font-style: italic; color: rgb(51, 51, 153);"
+                        size="-2">grid.</font></a><font><a><font
+                        style="font-style: italic; color: rgb(51, 51, 153);"
+                        size="-2">  Click on image to get 7Mb high res
+                        version.</font></a></font><font><a><font
+                        style="font-style: italic; color: rgb(51, 51, 153);"
+                        size="-2"><br>
+                        </font></a></font></td>
+                      <td
+                        style="text-align: right; vertical-align: middle;"><br>
+                        <a href="PISM_ross_speeds.png"><img
+                        alt="modeled ice speed for Ross Ice Shelf, Antarctica"
+                        src="PISM_ross_speeds.png"
+                        style="border: 0px solid ; width: 225px; height: 230px;"></a><br>
+
+
+                        <div style="text-align: left;">
+                        <font><a><font
+                        style="font-style: italic; color: rgb(51, 51, 153);"
+                        size="-2"><br>
+                        PISM-modeled (black arrows) versus observed (white
+                        arrows) ice-flow speed for Ross Ice Shelf, Antarctica.
+                        From 2.5km grid computation.</font></a></font></div>
+                      </td>
+                      <td style="vertical-align: top;"><small
+                        style="font-weight: bold; color: rgb(51, 51, 153);">contents:       
+                        <br>
+                        </small> 
+                        <ul>
+                          <li
+                          style="font-weight: bold; color: rgb(51, 51, 153);"><small><a
+                            href="http://www.pism-docs.org/">PISM</a><br>
+                            </small></li>
+                          <li
+                          style="font-weight: bold; color: rgb(51, 51, 153);"><a
+                            href="#publications"><small>publications</small></a></li>
+                          <li
+                          style="font-weight: bold; color: rgb(51, 51, 153);"><a
+                            href="#preprints"><small>preprints</small></a></li>
+                          <li
+                          style="font-weight: bold; color: rgb(51, 51, 153);"><a
+                            href="#posters"><small>presentations</small></a></li>
+                          <li
+                          style="font-weight: bold; color: rgb(51, 51, 153);"><a
+                            href="#students"><small>students</small></a></li>
+                          <li
+                          style="font-weight: bold; color: rgb(51, 51, 153);"><a
+                            href="#verification"><small>verification</small></a></li>
+                          <li><a href="#funding"><small
+                            style="font-weight: bold; color: rgb(51, 51, 153);">funding</small></a><br>
+                          </li>
+                        </ul>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+                <a href="PISM_ross_speeds.png"></a></td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<center>
+
+<div style="text-align: left;">
+<font color="#333399"><span style="font-weight: bold;"><big><br>
+People</big></span></font><br>
+<ul>
+  <li><big style="color: rgb(51, 51, 153);"><a
+    href="http://www.gi.alaska.edu/%7Eaaschwanden/">Andy Aschwanden</a>, <a href="http://www.arsc.edu/">Arctic Region Supercomputing
+    Center</a> and Geophysical Institute (GI), UAF</big></li>
+  <li><big style="color: rgb(51, 51, 153);"><a
+    href="http://www.dms.uaf.edu/%7Ebueler/">Ed Bueler</a>, <a
+    href="http://www.dms.uaf.edu/">Dept. of Mathematics and Statistics</a> and
+    GI, UAF </big></li>
+  <li><big style="color: rgb(51, 51, 153);">Mark Fahnestock, Research
+    Professor, </big><big style="color: rgb(51, 51, 153);"><a
+    href="http://www.gi.alaska.edu/">GI</a></big><big
+    style="color: rgb(51, 51, 153);">, UAF<br>
+    </big></li>
+  <li><big style="color: rgb(51, 51, 153);"><a
+    href="http://www.gi.alaska.edu/%7Eregine/">Regine Hock</a>, Dept. of
+    Geology and Geophysics and <a href="http://www.gi.alaska.edu/">GI</a>,
+    UAF</big></li>
+  <li><big style="color: rgb(51, 51, 153);"><a
+    href="http://glaciers.gi.alaska.edu/people/khroulev">Constantine Khroulev</a>, scientific
+    programmer (Research Professional), </big><big
+    style="color: rgb(51, 51, 153);"><a href="http://www.gi.alaska.edu/">GI</a>
+    UAF<br>
+    </big></li>
+  <li><big style="color: rgb(51, 51, 153);"><a
+    href="http://www.gi.alaska.edu/%7Etruffer">Martin Truffer</a>, Dept. of
+    Physics and <a href="http://www.gi.alaska.edu/">GI</a>, UAF</big></li>
+</ul>
+
+<font color="#333399"><span style="font-weight: bold;"><big><br>
+Former group members</big></span></font><br>
+<ul>
+  <li><big style="color: rgb(51, 51, 153);">Jed Brown, MS Mathematics 2006,
+    UAF</big></li>
+  <li><big style="color: rgb(51, 51, 153);">Latrice Bowman, MS Mathematics
+    2003, UAF<br>
+    </big></li>
+  <li><big style="color: rgb(51, 51, 153);">Dani Dellagiustina, MS
+    Computational Physics 2011, </big><big
+    style="color: rgb(51, 51, 153);"><span
+    style="text-decoration: underline;"></span>UAF</big></li>
+  <li><big style="color: rgb(51, 51, 153);"><a
+    href="http://glaciers.gi.alaska.edu/people/habermann">Marijke
+    Habermann</a>, PhD student in Geophysics, UAF<br>
+    </big></li>
+  <li><big style="color: rgb(51, 51, 153);">Craig Lingle, Professor emeritus of
+    Geophysics, UAF<br>
+    </big></li>
+  <li><big style="color: rgb(51, 51, 153);">Will Mitchell, </big><big
+    style="color: rgb(51, 51, 153);">MS Mathematics 2012,</big> <big
+    style="color: rgb(51, 51, 153);">UAF</big></li>
+  <li><big style="color: rgb(51, 51, 153);"><a
+    href="http://www.dms.uaf.edu/%7Emaxwell">David Maxwell</a>, </big><big
+    style="color: rgb(51, 51, 153);"><a href="http://www.dms.uaf.edu/">Dept. of
+    Mathematics and Statistics</a></big><big style="color: rgb(51, 51, 153);">,
+    UAF</big></li>
+</ul>
+
+</div>
+</center>
+
+
+<big><span
+style="color: rgb(51, 51, 153); font-weight: bold;"><br>
+<a name="pism"></a>Parallel Ice Sheet Model (PISM):</span></big><br><br>
+
+<div style="text-align: center;">
+  <big><span style="font-weight: bold; color: rgb(51, 51, 153);">HOME PAGE AND
+DOCUMENTATION:    </span><a style="font-weight: bold;"
+href="http://www.pism-docs.org/">http://www.pism-docs.org/</a><br>
+<br>
+      </big><span style="color: rgb(51, 51, 153);">SOURCE CODE HOST:   </span>
+<a href="https://github.com/pism/pism">https://github.com/pism/pism</a><br>
+<span style="color: rgb(51, 51, 153);"><br>
+SUPPORT EMAIL:    help@pism-docs.org</span><br>
+</div>
+
+
+<h4><big><font color="#333399"><a
+name="publications"></a>Publications:</font></big></h4>
+
+<ul style="color: rgb(51, 0, 153);">
+  <li> This list is no longer maintained, but all relevant publications by the group are listed <a style="font-weight: bold;" href="http://www.pism-docs.org/wiki/doku.php?id=publications">here</a> or <a style="font-weight: bold;" href="http://www.pism-docs.org/wiki/doku.php?id=numerical_pubs">here</a> at the <a style="font-weight: bold;"
+href="http://www.pism-docs.org/">www.pism-docs.org</a> website.</li>
+</ul>
+
+
+<h4><big><font color="#333399"><a name="preprints"></a>Preprints and technical
+reports:</font></big></h4>
+<ul style="color: rgb(51, 0, 153);">
+  <li> This list is no longer maintained, but all relevant preprints and technical reports by the group are listed <a style="font-weight: bold;" href="http://www.pism-docs.org/wiki/doku.php?id=publications">here</a> or <a style="font-weight: bold;" href="http://www.pism-docs.org/wiki/doku.php?id=numerical_pubs">here</a> at the <a style="font-weight: bold;"
+href="http://www.pism-docs.org/">www.pism-docs.org</a> website.</li>
+</ul>
+
+<h4><span style="color: rgb(0, 0, 153);"><big><a
+name="posters"></a>Presentations &amp; Posters:</big><br>
+</span></h4>
+<ul style="color: rgb(0, 0, 153);">
+
+  <li>E. Bueler, <a href="bueler-du-may2015.pdf"><em>Mathematical tools and obstacles
+in models of ice sheets</em></a>, (11 MB, <font color="#cc0000">PDF</font>)  Math Dept. Colloquium, University of Denver, May 2015.</li>
+  <li>E. Bueler, <a href="bueler-liwg2015.pdf"><em>Free boundaries and conservation equations in ice sheet models</em></a>, (7 MB, <font color="#cc0000">PDF</font>)  Invited presentation at 2015 CESM Land Ice Working Group meeting, February 2015.</li>
+  <li>E. Bueler, <a href="bueleragu2014talk.pdf"><em>Conservation in free-boundary fluid layer models</em></a>, (7 MB, <font color="#cc0000">PDF</font>)  Invited presentation at 2014 AGU Fall Meeting, December 2014.</li>
+  <li>E. Bueler, <a name="Flowing" id="Flowing"
+    href="talk-owu-iarc-2014.pdf"><em>Flowing ice sheets (with a bit of applied
+    math)</em></a>, (36 MB, <font color="#cc0000">PDF</font>)  talk for OWU at
+    IARC, UAF, May 2014.</li>
+  <li style="color: rgb(0, 0, 153);">E. Bueler, <a
+    href="buelerDMScolloqJan2014.pdf"><span style="font-style: italic;">What is
+    ... a variational inequality?</span></a>, (3 MB, <font
+    color="#cc0000">PDF</font>)  Dept. of Mathematics and Statistics
+    Colloquium, UAF, January 2014.</li>
+  <li>A. Aschwanden, <a href="vaw2013.pdf"><em>The need for hindcasting in ice
+    sheet modeling, or why we can get the right answer for the wrong
+    reason</em></a>, (23 MB, <font color="#cc0000">PDF</font>)  VAW Seminar,
+    ETH Zurich, October 2013.</li>
+  <li style="color: rgb(0, 0, 153);">A. Aschwanden, <a
+    href="uw-special.pdf"><span style="font-style: italic;">Using observations
+    to validate ice sheet models</span></a>, (41 MB, <font
+    color="#cc0000">PDF</font>).  Earth and Space Sciences research
+    presentation, Univ. Washington, April 2013.</li>
+  <li style="color: rgb(0, 0, 153);">A. Aschwanden, <a
+    href="uw-general.pdf"><span style="font-style: italic;">Understanding ice
+    sheets through observations and models</span></a>, (43 MB, <font
+    color="#cc0000">PDF</font>).  Earth and Space Sciences Seminar, Univ.
+    Washington, April 2013, and a <a
+    href="ice-sheet-buildup.mp4">simulation</a> (10 MB, <font
+    color="#cc0000">MP4</font>) for this talk.</li>
+  <li style="color: rgb(0, 0, 153);">G. Adalgeirsdottir and A. Aschwanden, <a
+    href="egu_2013.pdf"><span style="font-style: italic;">Are the simulated
+    climatic and dynamic mass losses of the Greenland Ice Sheet decoupled
+    during the next 100 years?</span></a> (4 MB, <font
+    color="#cc0000">PDF</font>).  Poster at EGU <font color="#333399">General
+    Assembly, Vienna, Austria</font>, April 2013.</li>
+  <li style="color: rgb(0, 0, 153);">A. Aschwanden, <a href="ut-talk.pdf"><span
+    style="font-style: italic;">Why we model ice sheets</span></a>, (60 MB,
+    <font color="#cc0000">PDF</font>).  Institute for Geophysics research
+    presentation, Univ. Texas, Austin, March 2013</li>
+  <li style="color: rgb(0, 0, 153);">A. Aschwanden, <a href="umt2012.pdf"><span
+    style="font-style: italic;">Why we need to model ice sheets</span></a>, (43
+    MB, <font color="#cc0000">PDF</font>). Dept. of Geosciences Seminar, Univ.
+    Montana, Missoula, December 2012<br>
+  </li>
+  <li style="color: rgb(0, 0, 153);">A. Aschwanden and J. van Angelen, <a
+    href="aschwanden_agu2012.pdf"><span style="font-style: italic;">Greenland
+    mass changes from 1960 to 2100: Hindcasting and forecasting with PISM and
+    RACMO2/GR</span></a>, (5 MB, <font color="#cc0000">PDF</font>). 
+    Presentation at 2012 AGU Fall Meeting.</li>
+  <li style="color: rgb(0, 0, 153);">E. Bueler, <a
+    href="bueler-pnwnas12.pdf"><span style="font-style: italic;">Weak and
+    shallow: New thinking about simulations of  ice sheet flows</span></a> (28
+    MB, <font color="#cc0000">PDF</font>)  Pacific Northwest Numerical Analysis
+    Seminar, Boise State Univ., October 2012.</li>
+  <li style="color: rgb(0, 0, 153);">A. Aschwanden, <a
+    href="nwgm2012.pdf"><span style="font-style: italic;">The need for
+    hindcasting in ice sheet modeling</span></a> (10 MB, <font
+    color="#cc0000">PDF</font>)  Pacific Northwest Glaciology Meeting, Seattle,
+    October 2012.</li>
+  <li style="color: rgb(0, 0, 153);">E. Bueler, <a href="ggsem2012.pdf"><span
+    style="font-style: italic;">How ice sheets flow, and how to model it on a
+    computer</span></a> (21 MB, <font color="#cc0000">PDF</font>)  Geology
+    &amp; Geophysics Seminar, UAF, October 2012.</li>
+  <li style="color: rgb(0, 0, 153);">W. Mitchell, <span
+    style="font-style: italic;"><a
+    href="WMitchell-slides-july2012.pdf">Geophysical Ice Flows: Analytical and
+    Numerical Approaches</a> </span><a
+    href="bueler-igs-fairbanks-june2012.pdf"><span
+    style="font-style: italic;"></span></a> (8 MB, <font
+    color="#cc0000">PDF</font>)  MS Mathematics thesis defense and Dept. of
+    Mathematics and Statistics Colloquium, UAF, July 2012.</li>
+  <li style="color: rgb(0, 0, 153);">E. Bueler, <a
+    href="bueler-igs-fairbanks-june2012.pdf"><span
+    style="font-style: italic;">Better subglacial hydrology into
+    PISM</span></a> (8 MB, <font color="#cc0000">PDF</font>)  Presentation<font
+    color="#333399"></font>IGS Symposium on Glaciers and Ice Sheets in a
+    Warming Climate, Fairbanks, June 2012.</li>
+  <li style="color: rgb(0, 0, 153);">E. Bueler, <a
+    href="bueler-hamburg.pdf"><span style="font-style: italic;">PISM (the
+    Parallel Ice Sheet Model) Latest 0.5 release, and Where will this community
+    take PISM?</span></a> (12 MB, <font color="#cc0000">PDF</font>) 
+    Presentation at the European PISM Workshop, Max Planck Institute for
+    Meteorology, Hamburg, May 2012.</li>
+  <li style="color: rgb(0, 0, 153);">C. Khroulev, E. Bueler, and A. Aschwanden,
+    <a href="Khroulev-PISM-Feb12.pdf"><span style="font-style: italic;">PISM
+    (Parallel Ice Sheet Model): Current status and future plans</span></a>. (5
+    MB, <font color="#cc0000">PDF</font>)  Presentation at CESM Land Ice
+    Working Group (LIWG) meeting, Boulder, February 2012.</li>
+  <li style="color: rgb(0, 0, 153);">A. Aschwanden, <a
+    href="parca_AA_2012.pdf"><span style="font-style: italic;">Utilizing NASA
+    data products to improve ice  sheet models</span></a>, (5 MB, <font
+    color="#cc0000">PDF</font>).  Presentation at PARCA meeting, January
+    2012.<br>
+  </li>
+  <li style="color: rgb(0, 0, 153);">A. Aschwanden and G. Adalgeirsdottir, <a
+    href="agu2011_AA.pdf"><span style="font-style: italic;">Observation-based
+    validation of ice sheet model  initial conditions using realistic
+    atmospheric  forcing for Greenland</span></a>, (62 MB, <font
+    color="#cc0000">PDF</font>).  Presentation at 2011 AGU Fall Meeting.</li>
+  <li style="color: rgb(0, 0, 153);">D. DellaGiustina, A. Aschwanden, C.
+    Khroulev , E. Bueler , and M. Truffer, <a
+    href="http://www2.gi.alaska.edu/snowice/glaciers/iceflow/AGU2011_dellagiu1.pdf"><span
+    style="font-style: italic;">Century-scale evolution of the  Jakobshavn
+    Isbræ with a high  resolution regional model</span><span
+    style="font-style: italic;"></span></a>, (1 MB, <font
+    color="#cc0000">PDF</font>).  Poster at 2011 AGU Fall Meeting.</li>
+  <li>E. Bueler, <span style="font-style: italic;"><a
+    href="bueler_cug_2011.pdf">Greenland ice sheet flow computations:
+    scaling-up to high spatial resolution and fast boundary
+    processes</a>, </span> (36 MB,<font color="#333399"></font><font
+    color="#cc0000">PDF</font><font color="#333399">). </font> Presentation at
+    Cray Users Group 2011 meeting, Fairbanks, May 2011.<br>
+  </li>
+  <li>E. Bueler, <span style="font-style: italic;">Should your ice sheet model
+    conserve energy? </span> Dept. of Mathematics and Statistics Colloquium,
+    UAF, April 2011.<br>
+  </li>
+  <li>A. Aschwanden, <span style="font-style: italic;">Inferring Greenland's
+    present state from models and observations: The key to the future.</span>
+    Geology &amp; Geophysics Seminar, UAF, April 2011.</li>
+  <li>E. Bueler, A. Aschwanden, and H. Blatter, <a
+    href="bueler_CIC_jan2011.pdf"><span style="font-style: italic;">Enthalpy
+    formulations for ice sheet modeling, and the role of basal melt
+    rates</span></a>, (1.4 MB,<font color="#333399"></font><font
+    color="#cc0000">PDF</font><font color="#333399">)</font>.  Seminar
+    presentation, Centre for Ice and Climate, Niel Bohr Institute, Copenhagen,
+    January 2011.<br>
+  </li>
+  <li>R. Hock, A. Aschwanden, J. Ettema, E. Bueler, C. Khroulev, D.
+    DellaGiustina, M. van den Broeke, <a
+    href="AGU2010_PISM_Greenland_regine.pdf"><span
+    style="font-style: italic;">Improving degree-day melt modeling of the
+    Greenland ice sheet in the Parallel Ice Sheet Model (PISM)</span></a>, (6.2
+    MB,<font color="#333399"></font><font color="#cc0000">PDF</font><font
+    color="#333399">).</font><font color="#333399">  Presentation at 2010 AGU
+    Fall Meeting.</font></li>
+  <li>D. DellaGiustina, E. Bueler, A. Aschwanden, C. Khroulev, M. Truffer, R.
+    Hock, <a href="AGU2010_dani.pdf"><span style="font-style: italic;">Regional
+    modeling of Greenland's outlet glaciers</span></a>, (7.6 MB,<font
+    color="#333399"></font><font color="#cc0000">PDF</font><font
+    color="#333399">).</font><font color="#333399">  Poster at 2010 AGU Fall
+    Meeting.</font></li>
+  <li>A. Aschwanden and the SeaRISE community, <a
+    href="cresis-searise.pdf"><span style="font-style: italic;">Observational
+    requirements to improve ice sheet models &ndash; the SeaRISE
+    perspective</span></a>, (13 MB,<font color="#333399"></font><font
+    color="#cc0000">PDF</font><font color="#333399">).</font><font
+    color="#333399">  Presentation at 2010 AGU Fall Meeting.</font></li>
+  <li>D. Maxwell, <a href="Maxwell_AGU2010.zip"><span
+    style="font-style: italic;">Determination of ice stream bed strength via
+    the incomplete Gauss-Newton method</span></a>, (0.9 MB,<font
+    color="#333399"></font><font color="#cc0000">PDF</font><font
+    color="#333399">).</font><font color="#333399">  Presentation at 2010 AGU
+    Fall Meeting.</font></li>
+  <li>A. Aschwanden, C. Khroulev, and E. Bueler, <a
+    href="AGU2010_andy_poster_flowline.pdf"><span
+    style="font-style: italic;">The Parallel Ice Sheet Model as a flowline
+    model</span></a>, (2.4 MB,<font color="#333399"></font><font
+    color="#cc0000">PDF</font><font color="#333399">).</font><font
+    color="#333399">  Poster at 2010 AGU Fall Meeting.</font></li>
+  <li>R. Hock, A. Aschwanden, J. Ettema, E. Bueler, C. Khroulev, and M. van den
+    Broeke, <a href="Regine_OhioIGS_2010_PISM.pdf"><span
+    style="font-style: italic;">Parameterizing Greenland&rsquo;s
+    surface</span><span style="font-style: italic;">mass balance in the
+    Parallel Ice Sheet Model (PISM)</span></a>, (8.9 MB,<font
+    color="#333399"></font><font color="#cc0000">PDF</font><font
+    color="#333399">).</font><font color="#333399">  Presentation at </font>IGS
+    Symposium on Earth's Disappearing Ice, Byrd Polar Research Center,
+    Columbus, Ohio, USA, August 2010.<br>
+  </li>
+  <li>A. Aschwanden, E. Bueler, and C. Khroulev, <a href="eguABK.pdf"><span
+    style="font-style: italic;">Evaluating the sensitivity of an ice sheet
+    model to changes in bed elevation and inclusion of membrane
+    stresses</span></a>, (8.9 MB,<font color="#333399"></font><font
+    color="#cc0000">PDF</font><font color="#333399">).</font><font
+    color="#333399">  Presentation at </font><font color="#333399">European
+    Geosciences Union General Assembly, Vienna, Austria, May 2010</font>.</li>
+  <li>E. Bueler, A. Aschwanden, D. Della Guistina, R. Hock, C. Khroulev, D.
+    Maxwell, and M. Truffer, <a style="font-style: italic;"
+    href="posterPISM0.3.pdf"><span style="font-style: italic;">PISM, a Parallel
+    Ice Sheet Model (stable0.3 release)</span></a>, (3.6MB,<font
+    color="#333399"></font><font color="#cc0000">PDF</font><font
+    color="#333399">).  Poster at </font><font color="#333399">European
+    Geosciences Union General Assembly, Vienna, Austria, May 2010</font>.</li>
+  <li>E. Bueler, C. Khroulev, A. Aschwanden, I. Joughin, and B. Smith, <a
+    href="posterBKAJS.pdf"><span style="font-style: italic;">Modeled and
+    observed fast flow in the Greenland ice sheet</span></a>, (1.9MB,<font
+    color="#333399"></font><font color="#cc0000">PDF</font><font
+    color="#333399">).  Poster at </font><font color="#333399">European
+    Geosciences Union General Assembly, Vienna, Austria, May 2010</font>.</li>
+  <li>E. Bueler, <a href="arsc_feb10.pdf"><span
+    style="font-style: italic;">PISM, a Parallel Ice Sheet Model</span></a>,
+    (2.6MB,<font color="#333399"></font><font color="#cc0000">PDF</font><font
+    color="#333399">)</font>.  Presentation at ARSC Computational Science
+    Symposium, February 2010.</li>
+  <li>E. Bueler, C. Khroulev, and A. Aschwanden, <a
+    href="bueler_ccsmliwg_feb10.pdf"><span
+    style="font-style: italic;">Verification, validation, and basal strength
+    in</span><span style="font-style: italic;">models for the present state of
+    ice sheets</span></a>, (2.6MB,<font color="#333399"></font><font
+    color="#cc0000">PDF</font><font color="#333399">)</font>.  Presentation at
+    CCSM Land Ice Working Group, NCAR, Boulder, CO, February 2010.</li>
+  <li>A. Aschwanden, C. Khroulev, and E. Bueler, <a
+    href="Aschwandenetal2009AGU_poster.pdf"><span
+    style="font-style: italic;">SeaRISE Greenland--On "spin-up"
+    procedures</span></a>, (1.4MB, <font color="#cc0000">PDF</font>).  Poster
+    at 2009 AGU Fall Meeting.<br>
+    <span style="color: rgb(51, 51, 153);"></span></li>
+  <li><span style="color: rgb(51, 51, 153);">E. Bueler, </span><a
+    href="http://www.dms.uaf.edu/%7Ebueler/karthaus/lecture.pdf"><span
+    style="font-style: italic;">Numerical modelling of ice sheets</span><span
+    style="font-style: italic;">and ice shelves</span></a><span
+    style="color: rgb(51, 51, 153);"></span>(5MB, <font
+    color="#cc0000">PDF</font>; also see <span
+    style="color: rgb(51, 51, 153);"></span><a
+    href="http://www.dms.uaf.edu/%7Ebueler/karthaus/">complete web page
+    here</a>), <span style="color: rgb(51, 51, 153);">a short course given at
+    </span><a
+    href="http://www.phys.uu.nl/%7Epelt0108/karthaus09/index.php">Karthaus 2009
+    Summer School on Ice Sheets and Glaciers in the Climate System</a><span
+    style="text-decoration: underline;"></span>, September, 2009.<span
+    style="color: rgb(51, 51, 153);"></span></li>
+  <li><span style="color: rgb(51, 51, 153);"></span>E. Bueler, C. Khroulev, A.
+    Aschwanden, and I. Joughin, <a href="talkIGSjuly09.pdf"><span
+    style="font-style: italic;">Modeled and observed fast flow in the Greenland
+    ice sheet </span></a>, (6 MB<font color="#333399">, </font><font
+    color="#cc0000">PDF</font><font color="#333399">)</font>.  Presentation at
+    IGS International Symposium on Glaciology in the International Polar Year,
+    Newcastle, UK, July 2009</li>
+  <li>A. Aschwanden, E. Bueler, and M. Truffer, <a
+    href="ftp://iacftp.ethz.ch/pub_read/aschwan/moca-poster.pdf"><span
+    style="font-style: italic;">PISM-A Polythermal Parallel Ice Sheet
+    Model</span></a> (13MB, <font color="#cc0000">PDF</font>), Poster at
+    MOCA-09 Joint Assembly, Montreal, July 2009.</li>
+  <li>Aschwanden and H. Blatter, <a style="font-style: italic;"
+    href="http://www.iac.ethz.ch/people/aaschwa/download/poster_agu2008">Thermodynamics
+    of Polythermal Glaciers and Ice Sheets</a> (700KB, <font
+    color="#cc0000">PDF</font>), Poster at AGU Fall Meeting, San Francisco, Dec
+    2008.</li>
+  <li>C. Khroulev, E. Bueler, C. Lingle, and J. Brown, <a
+    href="khroulev_final.pdf"><span style="font-style: italic;">Evaluating an
+    Antarctic flow model (PISM) using InSAR surface velocities</span></a>, (1.5
+    MB<font color="#333399">, </font><font color="#cc0000">PDF</font><font
+    color="#333399">).  Poster </font>at the 15th West Antarctic Ice Sheet
+    (WAIS) Workshop, Oct. 2008, Sterling, Virginia.</li>
+  <li>E. Bueler, <a href="talk_LANLaug08.pdf"><span
+    style="font-style: italic;">Community tools for model initialization,
+    spin-up, and evaluation</span></a>, (2 MB<font color="#333399">,
+    </font><font color="#cc0000">PDF</font><font color="#333399">)</font>. 
+    Presentation at Los Alamos National Laboratory Workshop "Building a
+    Next-Generation Community Ice Sheet Model", August 2008.<br>
+  </li>
+  <li>E. Bueler, <a href="talk_ARSCapril08.pdf"><span
+    style="font-style: italic;">PISM, a Parallel Ice Sheet Model</span></a><a
+    href="talkagu.pdf"><span style="font-style: italic;"></span></a>, (8
+    MB<font color="#333399">, </font><font color="#cc0000">PDF</font><font
+    color="#333399">)</font>.  Presentation to ARSC Technology Panel, UAF,
+    April 2008.</li>
+  <li>J. Brown and E. Bueler, <a href="jedEGU08.pdf"><span
+    style="font-style: italic;">Superposition of velocity for ice flow
+    modeling</span></a>, (3 MB<font color="#333399">, </font><font
+    color="#cc0000">PDF</font><font color="#333399">)</font>.  Presentation at
+    <font color="#333399">the European Geosciences Union General Assembly,
+    Vienna, Austria, April 2008</font>.</li>
+  <li>E. Bueler, <a href="talk_NYUfeb08.pdf"><span
+    style="font-style: italic;">Dynamics, Numerics, and Plain Old Ignorance;
+    progress and problems in numerical ice sheet/stream/shelf
+    modeling</span></a><a href="talkagu.pdf"><span
+    style="font-style: italic;"></span></a>, (6 MB<font color="#333399">,
+    </font><font color="#cc0000">PDF</font><font color="#333399">)</font>. 
+    Presentation at NYU CAOS Workshop "Predicting Sea Level in the 21st
+    Century: The Role of Ice-Ocean Interaction", February 2008. </li>
+  <li>E. Bueler, J. Brown, and C. Lingle.  <a href="talkagu.pdf"><span
+    style="font-style: italic;">A model of an ice sheet with one ice
+    stream</span></a>, (2 MB<font color="#333399">, </font><font
+    color="#cc0000">PDF</font><font color="#333399">)</font>.  Presentation by
+    Bueler at Fall AGU Meeting, San Francisco, December 2007.</li>
+  <li>M. Truffer.  <a href="TrufferPoster_1107.pdf"><span
+    style="font-style: italic;">The challenge of predicting the glacial
+    contribution to sea level rise</span></a>.  Poster.  November 2007.<br>
+  </li>
+  <li>C. S. Lingle, R. R. Muskett, and E. Bueler.  <a
+    href="LingleSeaLevel_pr.pdf"><span style="font-style: italic;">Ice Dynamics
+    and the Accelerating Glacier and Ice Sheet Contributions to Rising Sea
+    Level</span></a>, (15 MB<font color="#333399">, </font><font
+    color="#cc0000">PDF</font><font color="#333399">)</font>.  Presentation at
+    the University of Puerto Rico, September 2007.</li>
+  <li>E. Bueler, J. Brown, and C. Lingle.  <a href="LinglePISM_pr.pdf"><span
+    style="font-style: italic;">The challenge of prediction: developing a polar
+    ice sheet model capable of simulating the responses of ice shelves and ice
+    streams to a warming ocean</span></a>, (5 MB<font color="#333399">,
+    </font><font color="#cc0000">PDF</font><font color="#333399">)</font>. 
+    Presentation by Lingle at the University of Puerto Rico, September 2007.<br>
+  </li>
+  <li>E. Bueler. <a href="petsc_june07.pdf"><span
+    style="font-style: italic;">Using PETSc for scientific computing in
+    parallel</span></a>, (<font color="#cc0000">PDF</font><font
+    color="#333399">). </font> Presentation at the Arctic Regional
+    Supercomputer Center (ARSC), UAF, June 2007. <a
+    href="edPETScTALK.tar.gz">Gzipped tar file including three PETSc example
+    codes and the PDF for the talk</a>.</li>
+  <li>E. Bueler. <a href="pism_june07.pdf"><span
+    style="font-style: italic;">Ice sheet modelling at UAF and PISM, a Parallel
+    Ice Sheet Model</span> </a>(<font color="#cc0000">PDF</font><font
+    color="#333399">). </font> Presentation at the Arctic Regional
+    Supercomputer Center (ARSC), UAF, June 2007.</li>
+  <li>E. L. Bueler, C.S. Lingle, J. A. Brown, and D.N. Covey. <a
+    href="EGU_GA07Buelertalk.pdf"><span style="font-style: italic;">Basal
+    motion beneath the Antarctic ice sheet: a comparison of linear and plastic
+    till rheologies in a multi-modal flow model</span></a> (<font
+    color="#cc0000">PDF</font><font color="#333399">)</font>.   Presentation at
+    <font color="#333399">the European Geosciences Union General Assembly,
+    Vienna, Austria, April 2007</font>.</li>
+  <li>R. Calov, R. Greve, P. Huybrechts, E. Bueler, C. Ritz, D. Pollard, F.
+    Pattyn, and L. Tarasov. <a href="HEINO_poster.pdf"><span
+    style="font-style: italic;">First results of the ISMIP-HEINO model
+    intercomparison project</span></a> (<font color="#cc0000">PDF</font><font
+    color="#333399">). </font> Poster at <font color="#333399">the European
+    Geosciences Union General Assembly, Vienna, Austria, April 2007.<br>
+    </font></li>
+  <li>Ed Bueler.  <a href="siamGS07talk.pdf"><span
+    style="font-style: italic;">On well-posedness and instability for steady
+    temperature-dependent shallow ice flow</span></a>, (1.5 MB<font
+    color="#333399">, </font><font color="#cc0000">PDF</font><font
+    color="#333399">).  Presentation at the SIAM Geosciences meeting, Santa Fe,
+    NM, March 2007.</font></li>
+  <li>Craig Lingle, Ed Bueler, Jed Brown, and David Covey.  <a
+    href="parcaslides_JAN07.pdf"><span style="font-style: italic;">PISM, a
+    Parallel Ice Sheet Model: Current status of our Antarctic ice sheet
+    simulation</span></a>, (1 MB<font color="#333399">, </font><font
+    color="#cc0000">PDF</font><font color="#333399">).  Presentation at the JPL
+    PARCA meeting, 29--31 January 2007.</font></li>
+  <li>Ed Bueler, Jed Brown, and Craig Lingle.  <a
+    href="Bueler_WAIS06.pdf"><span style="font-style: italic;">Verifying
+    thermocoupled ice sheet models (and explaining the "warm
+    spokes")</span></a>, (3.5 MB<font color="#333399">, </font><font
+    color="#cc0000">PDF</font><font color="#333399">). </font>Presented at the
+    13th West Antarctic Ice Sheet Workshop, Pack Forest, Washington, September
+    2006. </li>
+  <li>Craig Lingle, Jed Brown, and Ed Bueler, <a
+    href="IGSCambridge_Lingle_et_al_060823.pdf"><span
+    style="font-style: italic;">Multi-modal flow in a thermocoupled model of
+    the Antarctic ice sheet, with verification</span></a>, (958 KB<font
+    color="#333399">, </font><font color="#cc0000">PDF</font><font
+    color="#333399">).  Presentation at the International Glaciological Society
+    Symposium on Cryospheric Indicators of Global Climate Change, Cambridge,
+    England, August 2006.</font></li>
+  <li>Ed Bueler, Craig S. Lingle, and Jed Brown, <a
+    href="IGSCambridge_Bueler_et_al_060825.pdf"><span
+    style="font-style: italic;">Fast computation of a viscoelastic deformable
+    Earth model for ice sheet simulations</span></a>, (444 KB<font
+    color="#333399">, </font><font color="#cc0000">PDF</font><font
+    color="#333399">).  Presentation at the International Glaciological Society
+    Symposium on Cryospheric Indicators of Global Climate Change, Cambridge,
+    England, August 2006.</font></li>
+  <li>Ed Bueler, <a href="icevar_obsTALK.pdf"><span
+    style="font-style: italic;">Ice Sheets and Obstacle
+    Problems</span></a>,<font color="#333399">(1.4 MB, </font><font
+    color="#cc0000">PDF</font><font color="#333399">).  </font><font
+    color="#333399">March 2006 UAF Dept. of Mathematics and Statistics
+    Colloquium.</font></li>
+  <li>Ellie Boyce, Roman Motyka, and Ed Bueler, <a
+    href="http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=2005AGUFM.C51A0265B&amp;amp;db_key=PHY&amp;amp;data_type=HTML&amp;amp;format=&amp;amp;high=445648fff101198"><span
+    style="font-style: italic;">Application of a 1-Dimensional Viscoelastic
+    Bending Beam Model to the Buoyant Terminus of Lake-Calving Mendenhall
+    Glacier, Southeast Alaska</span></a><span style="font-style: italic;">,
+    </span>American Geophysical Union, Fall Meeting 2005, abstract
+  #C51A-0265.</li>
+  <li><font color="#333399">Craig Lingle, Ed Bueler, and Jed Kallen-Brown,
+    <span style="font-style: italic;">Toward Multi-Modal Flow in a
+    Thermomechanical Model of the Antarctic Ice Sheet</span><span
+    style="font-style: italic;"></span></font><a><font color="#333399">. 
+    Presentation at </font>NW Glaciologist's Meeting, U.B.C., Oct. 21-22, 2005
+    and at the Oct. 24-26, 2005 planning meeting for NASA's Cryospheric
+    Sciences Program. </a> </li>
+  <li><font color="#333399">Ed Bueler, Jed A. Kallen-Brown, and Craig S.
+    Lingle, <a href="EGUposter.png"><span style="font-style: italic;">Exact
+    solutions and the verification of numerical models for ice
+    sheets</span></a> </font><font color="#333399">(250 KB, <span
+    style="color: rgb(204, 0, 0);">PNG</span> format).  </font><font
+    color="#333399">Poster at the European Geosciences Union 2005 General
+    Assembly, Vienna, Austria. </font> </li>
+  <li>
+    <div>
+    Kallen-Brown, J.A., E.L. Bueler, C.S. Lingle, and D.N. Covey. <span
+    style="font-style: italic;">A 3-D thermomechanical ice-sheet model:
+    preliminary tests with the Goldsby-Kohlstedt flow law</span>.  Presented at
+    the 10th West Antarctic Ice Sheet Workshop, 17-20 Sept. 2003, Sterling,
+    Virginia.</div>
+  </li>
+  <li>
+    <div>
+    Lingle, C.S., E.L. Bueler, J.A. Kallen-Brown, and D.N. Covey. <a
+    href="http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=2003AGUFM.C11C0832L&amp;amp;db_key=PHY&amp;amp;data_type=HTML&amp;amp;format=&amp;amp;high=445648fff101198"><span
+    style="font-style: italic;">A 3-D thermomechanical ice-sheet model:
+    preliminary simulation of the Antarctic ice sheet with the
+    Goldsby-Kohlstedt vs. Glen flow laws</span></a>. American Geophysical
+    Union, Fall Meeting 2003, abstract #C11C-0832.</div>
+  </li>
+  <li><font color="#333399">Ed Bueler, <a href="icemath.pdf"><i>Introduction to
+    the </i>mathematics<i>of ice flow</i></a>. (263 KB, </font><font
+    color="#cc0000">PDF</font><font color="#333399">).  </font><font
+    color="#333399">September 2003 UAF Dept. Mathematical Sciences
+    Colloquium.</font></li>
+</ul>
+
+<h4><font><big><font color="#333399"><a name="students"></a>Student
+work:</font></big></font></h4>
+<ul>
+  <li><span style="color: rgb(51, 51, 153);">Will Mitchell, </span><a
+    style="font-style: italic;"
+    href="http://www.math.wisc.edu/%7Ewhmitchell/WM_2012_MSTHESIS.pdf">Exact
+    and numerical solutions for Stokes flow in glaciers</a><span
+    style="color: rgb(51, 51, 153);">, M.S. Mathematics (thesis), UAF 2012.  <a
+    href="WMitchell-slides-july2012.pdf">Slides from defense.</a></span><br>
+  </li>
+  <li><span style="color: rgb(51, 51, 153);">Daniella Dellagiustina, </span><a
+    href="http://www2.gi.alaska.edu/snowice/glaciers/iceflow/ddellagiustinaMS.pdf"><span
+    style="font-style: italic;">Regional modeling of Greenland&rsquo;s outlet
+    glaciers with the Parallel Ice Sheet Model</span></a><span
+    style="color: rgb(51, 51, 153);">, M.S. Computational Physics, thesis,
+    2011.</span><br>
+    <span style="color: rgb(51, 51, 153);"></span></li>
+  <li><span style="color: rgb(51, 51, 153);">Ben Sperisen, <span
+    style="font-style: italic;">Ice Sheet Modelling: Numerics and
+    Visualization</span>, </span><span style="color: rgb(51, 51, 153);">final
+    <a href="Ben_paper.pdf">paper</a> and <a
+    href="Ben_presentation.pdf">presentation</a> from ARSC Undergraduate
+    Research Challenge, Summer 2008.  Here are<span
+    style="font-style: italic;"></span> IDV animations by Ben Sperisen of PISM
+    output (animated GIFs; from <a
+    href="http://homepages.vub.ac.be/%7Ephuybrec/eismint/greenland.html">EISMINT-Greenland</a>
+    CCL3 runs; for illustration of visualization possibilities):</span> 
+    <ul>
+      <li><a href="csurf_over_usurf_CCL3_PISM_bs7july08.gif">modeled surface
+        speed (color) over modeled surface elevation</a></li>
+      <li><span style="color: rgb(51, 51, 153);"><a
+        href="temp-5C_iso_small.gif">modeled -5<sup>o</sup> C isotherm
+        (temperature isosurface)</a><br>
+        </span></li>
+    </ul>
+  </li>
+  <li><span style="color: rgb(51, 51, 153);">Nathan Shemonski, </span><a
+    style="color: rgb(51, 51, 153);"
+    href="http://www.gi.alaska.edu/snowice/glaciers/iceflow/nshemonski_final.pdf"><span
+    style="font-style: italic;">Greenland in parallel</span></a><span
+    style="color: rgb(51, 51, 153);">, final paper from ARSC Undergraduate
+    Research Challenge, Summer 2007.</span></li>
+  <li><span style="color: rgb(51, 51, 153);">Jed Brown</span>, <a
+    href="slidesJBrown.pdf"><span style="font-style: italic;">Multi-modal ice
+    sheet dynamics: theory and implementation</span></a><font color="#333399">,
+    M.S. Mathematics, UAF, project, 2006.</font></li>
+  <li><font color="#333399">Latrice Bowman, <i>Numerical analysis of ice flow:
+    numerical solutions using finite difference approximations</i>,
+    </font><font color="#333399">M.S. Mathematics, UAF, </font><font
+    color="#333399">project, 2002.</font></li>
+</ul>
+
+<h4><font><font color="#333399"><span style="font-weight: bold;"><big><a
+name="verification"></a>Procedures/source codes for
+verification</big></span>:</font></font></h4>
+<ul>
+  <li><span style="color: rgb(51, 51, 153);">The current suite of verification
+    tests for PISM stable0.3 includes 12 different exact solutions, Tests A
+    through L.  Source codes for all of these, and some documentation, are
+    included in the <a href="https://gna.org/projects/pism/">open PISM source
+    code</a> and the <span style="font-style: italic;">PISM User's Manual
+    </span>(see <a
+    href="http://www.pism-docs.org/">http://www.pism-docs.org/</a>).  A python
+    script is used to manage refinement paths and to summarize
+    results.</span><br>
+    <span style="color: rgb(51, 51, 153);"></span></li>
+  <li><span style="color: rgb(51, 51, 153);">The paper </span><a
+    href="http://www.agu.org/pubs/crossref/2009/2008JF001179.shtml"><span
+    style="font-style: italic; color: rgb(51, 51, 153);">Shallow shelf
+    approximation as a "sliding law" ...</span></a><span
+    style="color: rgb(51, 51, 153);">includes PISM verification results for the
+    plastic till SSA stress balance from Test I, using these C codes: </span><a
+    style="color: rgb(51, 51, 153);"
+    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/exactTestsIJ.h">exactTestsIJ.h</a><span
+    style="color: rgb(51, 51, 153);">, </span><a
+    style="color: rgb(51, 51, 153);"
+    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/exactTestsIJ.c">exactTestsIJ.c</a><span
+    style="color: rgb(51, 51, 153);">.  Simple driver programs to evaluate
+    these exact solution are  </span><a style="color: rgb(51, 51, 153);"
+    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/simpleI.c">simpleI.c</a><span
+    style="color: rgb(51, 51, 153);">, </span><a
+    style="color: rgb(51, 51, 153);"
+    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/simpleJ.c">simpleJ.c</a><span
+    style="color: rgb(51, 51, 153);"></span><br>
+    <span style="color: rgb(51, 51, 153);"></span></li>
+  <li><span style="color: rgb(51, 51, 153);">The paper </span><a
+    href="http://www.igsoc.org/journal/53/182/j06j094.pdf"><font
+    style="color: rgb(51, 51, 153);" color="#333399"><span
+    style="font-style: italic;">Exact solutions to the thermomechanically
+    coupled shallow ice approximation ...</span></font></a><span
+    style="color: rgb(51, 51, 153);">includes PISM verification results from
+    the following C codes implementing the exact thermocoupled solutions:
+    </span><a style="color: rgb(51, 51, 153);"
+    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/exactTestsFG.h">exactTestsFG.h</a><span
+    style="color: rgb(51, 51, 153);">,  </span><a
+    style="color: rgb(51, 51, 153);"
+    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/exactTestsFG.c">exactTestsFG.c</a><span
+    style="color: rgb(51, 51, 153);">.  A simple driver program to evaluate
+    these exact solutions is  </span><a style="color: rgb(51, 51, 153);"
+    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/simpleFG.c">simpleFG.c</a><span
+    style="color: rgb(51, 51, 153);">.  Fortran 90 versions are:  </span><a
+    style="color: rgb(51, 51, 153);"
+    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/fortran/testsFG.f90">testsFG.f90</a><span
+    style="color: rgb(51, 51, 153);">,  </span><a
+    style="color: rgb(51, 51, 153);"
+    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/fortran/simpleFG.f90">simpleFG.f90</a><span
+    style="color: rgb(51, 51, 153);">.</span><br>
+    <span style="color: rgb(51, 51, 153);"></span></li>
+  <li><span style="color: rgb(51, 51, 153);">The paper </span><font
+    color="#333399"><a href="http://www.igsoc.org/annals/46/a46a130.pdf"><span
+    style="font-style: italic; color: rgb(51, 51, 153);">Fast computation of a
+    viscoelastic deformable earth model ...</span></a><span
+    style="color: rgb(51, 51, 153);">includes results from four Matlab codes: 
+    <a href="bedsheet.m">bedsheet.m</a>,  <a
+    href="fastearth.m">fastearth.m</a>,  <a
+    href="geforconv.m">geforconv.m</a>,  <a
+    href="viscdisc.m">viscdisc.m</a></span><span
+    style="font-style: italic;"><br>
+    </span></font></li>
+  <li><font color="#333399">The paper </font><a
+    href="http://www.ingentaconnect.com/content/igsoc/jog/2005/00000051/00000173/art00011"><font
+    color="#333399"><span style="font-style: italic;">Exact solutions and the
+    verification </span></font><font color="#333399"><span
+    style="font-style: italic;">of numerical models for isothermal ice
+    sheets</span></font></a><font color="#333399"><span
+    style="font-style: italic;"> </span> includes five verification tests
+    (A,B,C,D,E) and discussions of a transform method, margin approximation,
+    and the EISMINT isothermal benchmarks.  The Matlab codes used in preparing
+    the paper are here:  <a href="verifAE.m">verifAE.m</a>,   <a
+    href="verifBC.m">verifBC.m</a>,  <a href="verifD.m">verifD.m</a>,  <a
+    href="verifBu.m">verifBu.m</a>,   <a href="verifEIS.m">verifEIS.m</a>.  
+    These tests are in the PISM source code:<span
+    style="text-decoration: underline;"></span></font><font
+    style="color: rgb(51, 51, 153);" color="#333399"><a
+    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/exactTestsABCDE.h">exactTestsABCDE.h</a>, 
+    </font><a style="color: rgb(51, 51, 153);"
+    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/exactTestsABCDE.c">exactTestsABCDE.c;</a><span
+    style="color: rgb(51, 51, 153);">driver programs: <a
+    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/simpleABCD.c">simpleABCD.c</a>
+    and <a
+    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/simpleE.c">simpleE.c</a>.</span> <br>
+  </li>
+</ul>
+<span style="font-weight: bold;"><br>
+</span> 
+
+<div id="google_translate_element">
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en'
+  }, 'google_translate_element');
+}</script>
+<script type="text/javascript"
+src="http://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+</script>
+</div>
+<br>
+<br>
+</body>
+</html>
