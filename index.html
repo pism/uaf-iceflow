@@ -659,95 +659,10 @@ work:</font></big></font></h4>
 </ul>
 
 <h4><font><font color="#333399"><span style="font-weight: bold;"><big><a
-name="verification"></a>Procedures/source codes for
+name="verification"></a>Codes for
 verification</big></span>:</font></font></h4>
 <ul>
-  <li><span style="color: rgb(51, 51, 153);">The current suite of verification
-    tests for PISM stable0.3 includes 12 different exact solutions, Tests A
-    through L. Source codes for all of these, and some documentation, are
-    included in the <a href="https://github.com/pism/pism">PISM source
-    code</a> and the <span style="font-style: italic;">PISM User's Manual
-    </span>(see <a
-    href="http://www.pism-docs.org/">http://www.pism-docs.org/</a>). A python
-    script is used to manage refinement paths and to summarize
-    results.</span><br>
-    <span style="color: rgb(51, 51, 153);"></span></li>
-  <li><span style="color: rgb(51, 51, 153);">The paper </span><a
-    href="http://www.agu.org/pubs/crossref/2009/2008JF001179.shtml"><span
-    style="font-style: italic; color: rgb(51, 51, 153);">Shallow shelf
-    approximation as a "sliding law" ...</span></a><span
-    style="color: rgb(51, 51, 153);">includes PISM verification results for the
-    plastic till SSA stress balance from Test I, using these C codes: </span><a
-    style="color: rgb(51, 51, 153);"
-    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/exactTestsIJ.h">exactTestsIJ.h</a><span
-    style="color: rgb(51, 51, 153);">, </span><a
-    style="color: rgb(51, 51, 153);"
-    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/exactTestsIJ.c">exactTestsIJ.c</a><span
-    style="color: rgb(51, 51, 153);">. Simple driver programs to evaluate
-    these exact solution are </span><a style="color: rgb(51, 51, 153);"
-    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/simpleI.c">simpleI.c</a><span
-    style="color: rgb(51, 51, 153);">, </span><a
-    style="color: rgb(51, 51, 153);"
-    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/simpleJ.c">simpleJ.c</a><span
-    style="color: rgb(51, 51, 153);"></span><br>
-    <span style="color: rgb(51, 51, 153);"></span></li>
-  <li><span style="color: rgb(51, 51, 153);">The paper </span><a
-    href="http://www.igsoc.org/journal/53/182/j06j094.pdf"><font
-    style="color: rgb(51, 51, 153);" color="#333399"><span
-    style="font-style: italic;">Exact solutions to the thermomechanically
-    coupled shallow ice approximation ...</span></font></a><span
-    style="color: rgb(51, 51, 153);">includes PISM verification results from
-    the following C codes implementing the exact thermocoupled solutions:
-    </span><a style="color: rgb(51, 51, 153);"
-    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/exactTestsFG.h">exactTestsFG.h</a><span
-    style="color: rgb(51, 51, 153);">, </span><a
-    style="color: rgb(51, 51, 153);"
-    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/exactTestsFG.c">exactTestsFG.c</a><span
-    style="color: rgb(51, 51, 153);">. A simple driver program to evaluate
-    these exact solutions is </span><a style="color: rgb(51, 51, 153);"
-    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/simpleFG.c">simpleFG.c</a><span
-    style="color: rgb(51, 51, 153);">. Fortran 90 versions are: </span><a
-    style="color: rgb(51, 51, 153);"
-    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/fortran/testsFG.f90">testsFG.f90</a><span
-    style="color: rgb(51, 51, 153);">, </span><a
-    style="color: rgb(51, 51, 153);"
-    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/fortran/simpleFG.f90">simpleFG.f90</a><span
-    style="color: rgb(51, 51, 153);">.</span><br>
-    <span style="color: rgb(51, 51, 153);"></span></li>
-  <li><span style="color: rgb(51, 51, 153);">The paper </span><font
-    color="#333399"><a href="http://www.igsoc.org/annals/46/a46a130.pdf"><span
-    style="font-style: italic; color: rgb(51, 51, 153);">Fast computation of a
-    viscoelastic deformable earth model ...</span></a><span
-    style="color: rgb(51, 51, 153);">includes results from four Matlab codes:
-    <a href="bedsheet.m">bedsheet.m</a>, <a
-    href="fastearth.m">fastearth.m</a>, <a
-    href="geforconv.m">geforconv.m</a>, <a
-    href="viscdisc.m">viscdisc.m</a></span><span
-    style="font-style: italic;"><br>
-    </span></font></li>
-  <li><font color="#333399">The paper </font><a
-    href="http://www.ingentaconnect.com/content/igsoc/jog/2005/00000051/00000173/art00011"><font
-    color="#333399"><span style="font-style: italic;">Exact solutions and the
-    verification </span></font><font color="#333399"><span
-    style="font-style: italic;">of numerical models for isothermal ice
-    sheets</span></font></a><font color="#333399"><span
-    style="font-style: italic;"></span> includes five verification tests
-    (A,B,C,D,E) and discussions of a transform method, margin approximation,
-    and the EISMINT isothermal benchmarks. The Matlab codes used in preparing
-    the paper are here: <a href="verifAE.m">verifAE.m</a>,  <a
-    href="verifBC.m">verifBC.m</a>, <a href="verifD.m">verifD.m</a>, <a
-    href="verifBu.m">verifBu.m</a>,  <a href="verifEIS.m">verifEIS.m</a>. 
-    These tests are in the PISM source code:<span
-    style="text-decoration: underline;"></span></font><font
-    style="color: rgb(51, 51, 153);" color="#333399"><a
-    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/exactTestsABCDE.h">exactTestsABCDE.h</a>,
-    </font><a style="color: rgb(51, 51, 153);"
-    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/exactTestsABCDE.c">exactTestsABCDE.c;</a><span
-    style="color: rgb(51, 51, 153);">driver programs: <a
-    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/simpleABCD.c">simpleABCD.c</a>
-    and <a
-    href="http://svn.gna.org/viewcvs/pism/trunk/src/verif/tests/simpleE.c">simpleE.c</a>.</span><br>
-  </li>
+  <li><span style="color: rgb(51, 51, 153);">The current suite of verification tests for PISM includes many different exact solutions.  Source codes for all of these, and some documentation, are included in the <a href="https://github.com/pism/pism">PISM source code</a>---see src/verif/tests/---and in the <a href="http://www.pism-docs.org/wiki/lib/exe/fetch.php?media=manual.pdf"> <span style="font-style: italic;">PISM User's Manual</span></a>.  See the PISM homepage at <a href="http://www.pism-docs.org">www.pism-docs.org</a>.</li>
 </ul>
 <span style="font-weight: bold;"><br>
 </span> 
